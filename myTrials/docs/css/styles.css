@@ -1,0 +1,30 @@
+.container1 {
+   border: 1px solid black;
+   margin: 0 auto;
+   padding: 10;
+   width: 75%;
+   text-align: center;
+}
+
+.container-head1 {
+   border: 1px solid black;
+   text-align: center;
+   padding: 10px;
+   justify-content: space-around;
+   display: flex;
+   
+}
+.clickBtn {
+   background-color: lightblue;
+   border-radius: 25%;
+   font-size: 2rem;
+}
+.resetBtn {
+   background-color: rgba(255, 81, 55, 0.945);
+   border-radius: 25%;
+   font-size: 2rem;
+}
+.container-head1 div{
+   padding: 10px;
+   align-items: center;
+}
