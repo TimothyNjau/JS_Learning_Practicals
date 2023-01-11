@@ -13,3 +13,18 @@ function ageInDays() {
 function reset(){
    document.getElementById('ageInDays').remove();
 }
+//Task Two: Cat Generator
+function generateCat() {
+   var image = document.createElement('img');
+   var div = document.getElementById("flex-box-img-gen");
+   image.src = "static/images/birthday_01.jpg"
+   div.appendChild(image);   
+}
+function remove(){
+   var div = document.getElementById("flex-box-img-gen");
+   var image = div.querySelector("img");
+   while(image){
+      div.removeChild(image);
+      image = div.firstElementChild;
+  }     
+}
