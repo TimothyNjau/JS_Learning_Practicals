@@ -11,28 +11,39 @@
 
 <body>
 
-<div class="container-1">
-   <h2>Task One: Age in Days</h2>
-   <div class="flex-box-cont-1">
-      <div class="btn">
-         <button id="btnPrimary" onclick="ageInDays()">Click Me</button>
+   <div class="container-1">
+      <h2>Task One: Age in Days</h2>
+      <div class="flex-box-cont-1">
+         <div class="btn">
+            <button id="btnPrimary" onclick="ageInDays()">Click Me</button>
+         </div>
+         <div>
+            <button id="btnDanger" onclick="reset()">Reset</button>
+         </div>
       </div>
+      <div class="flex-box-cont-1">
+         <div id="flex-box-result"></div>
+      </div>
+   </div>
+   <div class="container-2">
+      <h2>Task Two: Image Generator</h2>
+      <button id="btnSuccess" onclick="generateCat()">Generate Image</button>
+      <button id="btnDanger" onclick="remove()">Remove Image</button>
+      <div class="flex-box-cont-2" id="flex-box-img-gen">
+
+      </div>
+   </div>
+   <div class="container-3">
+      <h2>Task Three: Rock, Paper, Scissors Game</h2>
       <div>
-         <button id="btnDanger" onclick="reset()">Reset</button>
+         <button id="btnRefresh" onclick="window.location.reload()">Retry</button>
       </div>
+      <div class="flex-box-cont-3" id="flex-box-rsp">
+         <img id="rock" src="static/images/RSP_game/rock_picture.jpg" alt="" onclick="rspGame(this)">
+         <img id="paper" src="static/images/RSP_game/paper_picture.jpg" alt="" onclick="rspGame(this)">
+         <img id="scissors" src="static/images/RSP_game/scissors_picture.png" alt="" onclick="rspGame(this)">
+      </div> 
    </div>
-   <div class="flex-box-cont-1">
-      <div id="flex-box-result"></div>
-   </div>
-</div>
-<div class="container-2">
-   <h2>Task Two: Image Generator</h2>
-   <button id="btnSuccess" onclick="generateCat()">Generate Image</button>
-   <button id="btnDanger" onclick="remove()">Remove Image</button>
-   <div class="flex-box-cont-2" id="flex-box-img-gen">
-    
-   </div>
-</div>
 
 </body>
 
