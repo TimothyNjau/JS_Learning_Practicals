@@ -92,3 +92,34 @@ function rspFrontEnd(humanImgChoice, botImgChoice, finalMessage) {
    document.getElementById('flex-box-rsp').appendChild(botDiv);
 
 }
+// Task Four: Change the color of all buttons
+let allButtons = document.getElementsByTagName('button');
+console.log(allButtons);
+
+var copyAllButtons = [];
+for (let x=0; x < allButtons.length; x++){
+   copyAllButtons.push(allButtons[x]);
+}
+console.log(copyAllButtons);
+
+function buttonColorChange(optionSelect){
+   console.log(optionSelect.value);
+   if (optionSelect.value === 'red'){
+      buttonRed();
+   }
+   else if (optionSelect.value === 'green'){
+      buttonGreen();
+   }
+   else if (optionSelect.value === 'yellow'){
+      buttonYellow();
+   } 
+   else if (optionSelect.value === 'random'){
+      buttonRandom();
+   }
+}
+
+function buttonRed(){
+   for (let i=0; i<allButtons.length;i++) {
+
+   }
+}

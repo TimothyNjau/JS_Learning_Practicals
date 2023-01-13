@@ -44,6 +44,24 @@
          <img id="scissors" src="static/images/RSP_game/scissors_picture.png" alt="" onclick="rspGame(this)">
       </div> 
    </div>
+   <div class="container-4">
+      <h2 id="change-my-color">Task Four: Change the Color of All Buttons</h2>
+      <div class="flex-box-cont-4">
+         <form action="">
+            <select name="backdrop" id="background" onchange="buttonColorChange(this)"> <!--on change means that the effect will only take place when another option is selected. If the same option is selected twice, nothing happens-->>
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="reset">Reset</option>
+         </select>
+         </form>
+         <button style="background-color: red;" id="btnRed" >DuckDuckLoo</button>
+         <button id="btnGreen" style="background-color: green;">WannaBee</button>
+         <button id="btnYellow" style="background-color: yellow;">Look At ME!</button>
+         <button id="btnBlue" style="background-color:blue">Lets Go!!</button>
+      </div>
+   </div>
 
 </body>
 
