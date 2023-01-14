@@ -15,10 +15,10 @@
       <h2>Task One: Age in Days</h2>
       <div class="flex-box-cont-1">
          <div class="btn">
-            <button id="btnPrimary" onclick="ageInDays()">Click Me</button>
+            <button class='btn-Primary' id="btnPrimary" onclick="ageInDays()">Click Me</button>
          </div>
          <div>
-            <button id="btnDanger" onclick="reset()">Reset</button>
+            <button id="btnDanger" onclick="reset()" class="btn-Danger">Reset</button>
          </div>
       </div>
       <div class="flex-box-cont-1">
@@ -27,8 +27,8 @@
    </div>
    <div class="container-2">
       <h2>Task Two: Image Generator</h2>
-      <button id="btnSuccess" onclick="generateCat()">Generate Image</button>
-      <button id="btnDanger" onclick="remove()">Remove Image</button>
+      <button id="btnSuccess" onclick="generateCat()" class="btn-Success">Generate Image</button>
+      <button id="btnDanger" onclick="remove()" class="btn-Danger">Remove Image</button>
       <div class="flex-box-cont-2" id="flex-box-img-gen">
 
       </div>
@@ -36,7 +36,7 @@
    <div class="container-3">
       <h2>Task Three: Rock, Paper, Scissors Game</h2>
       <div>
-         <button id="btnRefresh" onclick="window.location.reload()">Retry</button>
+         <button class="btn-Refresh" id="btnRefresh" onclick="window.location.reload()">Retry</button>
       </div>
       <div class="flex-box-cont-3" id="flex-box-rsp">
          <img id="rock" src="static/images/RSP_game/rock_picture.jpg" alt="" onclick="rspGame(this)">
@@ -56,10 +56,10 @@
             <option value="reset">Reset</option>
          </select>
          </form>
-         <button style="background-color: red;" id="btnRed" >DuckDuckLoo</button>
-         <button id="btnGreen" style="background-color: green;">WannaBee</button>
-         <button id="btnYellow" style="background-color: yellow;">Look At ME!</button>
-         <button id="btnBlue" style="background-color:blue">Lets Go!!</button>
+         <button class="btn-Red" id="btnRed" >DuckDuckLoo</button>
+         <button class="btn-Green" id="btnGreen" >WannaBee</button>
+         <button class="btn-Yellow" id="btnYellow" >Look At ME!</button>
+         <button class="btn-Blue" id="btnBlue" >Lets Go!!</button>
       </div>
    </div>
 

@@ -96,11 +96,13 @@ function rspFrontEnd(humanImgChoice, botImgChoice, finalMessage) {
 let allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 
-var copyAllButtons = [];
-for (let x=0; x < allButtons.length; x++){
-   copyAllButtons.push(allButtons[x]);
+function originalButttonColors(){
+   let ButtonColors = [];
+   for(let x=0; x<allButtons.length; x++){
+      ButtonColors.push(allButtons[x].classList[0]);
+   }
+   return ButtonColors;
 }
-console.log(copyAllButtons);
 
 function buttonColorChange(optionSelect){
    console.log(optionSelect.value);
@@ -116,10 +118,33 @@ function buttonColorChange(optionSelect){
    else if (optionSelect.value === 'random'){
       buttonRandom();
    }
+   else if (optionSelect.value === 'reset'){
+      buttonColorReset();
+   }
 }
 
 function buttonRed(){
    for (let i=0; i<allButtons.length;i++) {
-
+      allButtons[i].classList.remove(allButtons[i].classList[0]);
+      allButtons[i].classList.add('btn-Red');
    }
+}
+function buttonGreen(){
+   for(i=0;i<allButtons.length;i++){
+      allButtons[i].classList.remove(allButtons[i].classList[0]);
+      allButtons[i].classList.add('btn-Green');
+   }
+}
+function buttonYellow(){
+   for(i=0;i<allButtons.length;i++){
+      allButtons[i].classList.remove(allButtons[i].classList[0]);
+      allButtons[i].classList.add('btn-Yellow');
+   }
+}
+function buttonColorReset(){
+   originalButttonColors();
+ for(i-0;i<allButtons.length;i++){
+   allButtons[i].classList.remove(allButtons[i].classList[0]);
+   allButtons[i].classList.add(ButtonColors[i]);
+ }
 }
