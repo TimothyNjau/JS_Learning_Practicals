@@ -95,9 +95,8 @@ function rspFrontEnd(humanImgChoice, botImgChoice, finalMessage) {
 // Task Four: Change the color of all buttons
 let allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
-
+let ButtonColors = [];
 function originalButttonColors(){
-   let ButtonColors = [];
    for(let x=0; x<allButtons.length; x++){
       ButtonColors.push(allButtons[x].classList[0]);
    }
@@ -106,6 +105,7 @@ function originalButttonColors(){
 
 function buttonColorChange(optionSelect){
    console.log(optionSelect.value);
+   originalButttonColors();
    if (optionSelect.value === 'red'){
       buttonRed();
    }
@@ -142,9 +142,16 @@ function buttonYellow(){
    }
 }
 function buttonColorReset(){
-   originalButttonColors();
- for(i-0;i<allButtons.length;i++){
+ for(i=0;i<allButtons.length;i++){
    allButtons[i].classList.remove(allButtons[i].classList[0]);
    allButtons[i].classList.add(ButtonColors[i]);
  }
+}
+function buttonRandom(){
+   var choices = ['btn-Red' , 'btn-Green', 'btn-Yellow', 'btn-Blue'];
+   for (i=0;i<allButtons.length;i++){
+      let randNumber = Math.floor(Math.random() * 4);
+      allButtons[i].classList.remove(allButtons[i].classList[0]);
+      allButtons[i].classList.add(choices[randNumber]);
+   }
 }
