@@ -28,7 +28,7 @@
    <div class="container-2">
       <h2>Task Two: Image Generator</h2>
       <button id="btnSuccess" onclick="generateCat()" class="btn-Success">Generate Image</button>
-      <button id="btnDanger" onclick="remove()" class="btn-Danger">Remove Image</button>
+      <button id="btnDanger" onclick="remove()" class="btn-Danger">Remove Images</button>
       <div class="flex-box-cont-2" id="flex-box-img-gen">
 
       </div>
@@ -61,6 +61,46 @@
          <button class="btn-Yellow" id="btnYellow" >Look At ME!</button>
          <button class="btn-Blue" id="btnBlue" >Lets Go!!</button>
       </div>
+   </div>
+   <div class="container-5">
+      <h2>Task Five: Blackjack</h2>
+      <h3>
+         <span id="blackjack-result">Let's Play</span>
+      </h3>
+      <div class="flex-blackjack-1">
+         <div class="your-box">
+            <h2>You:
+               <span id="user-blackjack-result">0</span>
+            </h2>
+         </div>
+         <div class="bot-box">
+            <h2> Dealer: 
+               <span id="bot-blackjack-result">0</span>
+            </h2>
+         </div>
+      </div>
+      <div class="flex-blackjack-2">
+         <div>
+            <button class="btn-Green" style="font-size: 25px;border-radius: 7.5px;margin: 5px;font-weight: bold;" id="blackjack-hit">Hit</button>
+            <button class="btn-Yellow"style="font-size: 25px;border-radius: 7.5px;margin: 5px;font-weight: bold;" id="blackjack-stand">Stand</button>
+            <button class="btn-Red" style="font-size: 25px;border-radius: 7.5px;margin: 5px;font-weight: bold;" id="blackjack-deal">Deal</button>
+         </div>
+      </div>
+      <div class="flex-blackjack-3">
+         <table>
+            <tr>
+               <th>Wins</th>
+               <th>Draws</th>
+               <th>Losses</th>
+            </tr>
+            <tr>
+               <td> <span id="wins">0</span></td>
+               <td> <span id="draws">0</span></td>
+               <td> <span id="losses">0</span></td>
+            </tr>
+         </table>
+      </div>
+
    </div>
 
 </body>
