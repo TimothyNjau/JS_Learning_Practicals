@@ -1,7 +1,7 @@
 body{
    background: linear-gradient(aqua,white);
 }
-.container-1, .container-3, .container-4, .container-5{
+.container-1, .container-3, .container-4{
    border: 2px solid;
    border-color: black; 
    padding: 5px;
@@ -83,4 +83,38 @@ text-align: center;
 }
 .btn-Blue {
    background-color: blue;
+}
+.container-5 {
+   border: 2px solid;
+   border-color: black; 
+   padding: 5px;
+   text-align: center;
+   width: 75%;
+   margin: 0 auto;
+}
+.flex-blackjack-1 {
+   height: 350px;
+   width: auto;
+   background-color: rgb(13, 90, 29);
+   color: #ffff;
+   }
+.flex-blackjack-1 div{
+   border: 1px solid black;
+   padding: 10px;
+   flex: 1;
+   text-align: center;
+   font-size: large;
+
+}
+.flex-blackjack-2 div{
+   padding: 10px;
+}
+table, th, td {
+   padding: 5px;
+   border: 1px solid black;
+   font-size: 20px;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+.flex-blackjack-2 button:hover{
+   box-shadow: 5px 10px 15px rgba(0,0,0,0.8);
 }
