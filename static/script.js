@@ -155,3 +155,31 @@ function buttonRandom(){
       allButtons[i].classList.add(choices[randNumber]);
    }
 }
+
+//Task five: Blackjack
+let blackjackGame = {
+   'you':{'scoreSpan':'#user-blackjack-result','div':'#your-box','score': 0},
+   'dealer':{'scoreSpan':'#bot-blackjack-result','div':'#bot-box','score': 0},
+}
+const YOU = blackjackGame['you'];
+const DEALER = blackjackGame['dealer'];
+const hitSound = new Audio('static/images/sounds/swish.m4a');
+
+function blackjackHit(){
+   showCard(YOU);
+}
+function showCard(activePlayer){
+   let cardImage = document.createElement('img');
+   cardImage.src = 'static/images/images/Q.png';
+   cardImage.style.height = "auto";
+   cardImage.style.maxWidth = "25%";
+   cardImage.style.padding = "10px";
+   document.querySelector(activePlayer['div']).appendChild(cardImage);
+   hitSound.play();
+}
+function blackjackDeal(){
+   let yourImages = document.querySelector('#your-box').querySelectorAll('img');
+   for(i=0;i<yourImages.length;i++){
+      yourImages[i].remove();
+   }
+}
