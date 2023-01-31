@@ -160,17 +160,21 @@ function buttonRandom(){
 let blackjackGame = {
    'you':{'scoreSpan':'#user-blackjack-result','div':'#your-box','score': 0},
    'dealer':{'scoreSpan':'#bot-blackjack-result','div':'#bot-box','score': 0},
+   'cards':['2','3','4','5','6','7','8','9','10','J','Q','K','A']
 }
 const YOU = blackjackGame['you'];
 const DEALER = blackjackGame['dealer'];
 const hitSound = new Audio('static/images/sounds/swish.m4a');
 
 function blackjackHit(){
-   showCard(YOU);
+   let card = randomCard();
+   console.log(card);
+   showCard(card, YOU);
+   
 }
-function showCard(activePlayer){
+function showCard(card, activePlayer){
    let cardImage = document.createElement('img');
-   cardImage.src = 'static/images/images/Q.png';
+   cardImage.src = `static/images/images/${card}.png`;
    cardImage.style.height = "auto";
    cardImage.style.maxWidth = "25%";
    cardImage.style.padding = "10px";
@@ -179,7 +183,14 @@ function showCard(activePlayer){
 }
 function blackjackDeal(){
    let yourImages = document.querySelector('#your-box').querySelectorAll('img');
+   let dealermages = document.querySelector('#bot-box').querySelectorAll('img');
+
    for(i=0;i<yourImages.length;i++){
       yourImages[i].remove();
+      dealermages[i].remove();
    }
+}    
+function randomCard(){
+   let randIndex = Math.floor(Math.random()*13);
+   return blackjackGame['cards'][randIndex];
 }
