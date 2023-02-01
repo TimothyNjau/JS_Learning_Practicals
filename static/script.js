@@ -160,7 +160,8 @@ function buttonRandom(){
 let blackjackGame = {
    'you':{'scoreSpan':'#user-blackjack-result','div':'#your-box','score': 0},
    'dealer':{'scoreSpan':'#bot-blackjack-result','div':'#bot-box','score': 0},
-   'cards':['2','3','4','5','6','7','8','9','10','J','Q','K','A']
+   'cards':['2','3','4','5','6','7','8','9','10','J','Q','K','A'],
+   'cardsMap':{'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'J':10,'K':10,'Q':10,'A':[1,11]}
 }
 const YOU = blackjackGame['you'];
 const DEALER = blackjackGame['dealer'];
@@ -170,6 +171,8 @@ function blackjackHit(){
    let card = randomCard();
    console.log(card);
    showCard(card, YOU);
+   updateScore(card, YOU);
+   console.log(YOU['score']);
    
 }
 function showCard(card, activePlayer){
@@ -193,4 +196,8 @@ function blackjackDeal(){
 function randomCard(){
    let randIndex = Math.floor(Math.random()*13);
    return blackjackGame['cards'][randIndex];
+}
+function updateScore(card, activePlayer){
+   activePlayer['score'] += blackjackGame['cardsMap'][card];
+
 }
